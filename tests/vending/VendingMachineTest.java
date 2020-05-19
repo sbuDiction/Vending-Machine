@@ -30,28 +30,28 @@ public class VendingMachineTest {
     public void shouldSetStockForChocolate() {
         Chocolates chocolates = new Chocolates();
         int stockLevel = 10;
-        chocolates.addStock(stockLevel);
+        chocolates.setStockLevel(stockLevel);
         assertEquals(10,chocolates.getStockLevel(),"Should be abe to set the stock or update the stock for Chocolate");
     }
     @Test
     public void shouldSetStockForSaltySnacks() {
         SaltySnacks saltySnack = new SaltySnacks();
         int stockLevel = 5;
-        saltySnack.addStock(stockLevel);
+        saltySnack.setStockLevel(stockLevel);
         assertEquals(5,saltySnack.getStockLevel(),"Should be abe to set the stock or update the stock for Salty snacks");
     }
     @Test
     public void shouldSetStockForSoftDrinks() {
         SoftDrinks softDrink = new SoftDrinks();
         int stockLevel = 20;
-        softDrink.addStock(stockLevel);
+        softDrink.setStockLevel(stockLevel);
         assertEquals(20,softDrink.getStockLevel(),"Should be abe to set the stock or update the stock for Soft drink");
     }
     @Test
     public void shouldGetStockForSaltySnacks() {
         SoftDrinks softDrink = new SoftDrinks();
         int stockLevel = 20;
-        softDrink.addStock(stockLevel);
+        softDrink.setStockLevel(stockLevel);
         assertEquals(20,softDrink.getStockLevel(),"Should return the number for the new updated stock");
     }
 }

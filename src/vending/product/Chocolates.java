@@ -3,7 +3,7 @@ package vending.product;
 public class Chocolates extends Product {
     private int stockLevel;
 
-    public void addStock(int stockLevel) {
+    public void setStockLevel(int stockLevel) {
         this.stockLevel = stockLevel;
     };
 
