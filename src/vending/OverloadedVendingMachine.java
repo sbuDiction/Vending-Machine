@@ -8,19 +8,14 @@ import vending.product.SoftDrinks;
 
 public class OverloadedVendingMachine {
 
-    private int softDrinkQty1;
-    private int saltySnacksQty1;
-    private int chocolatesQty1;
+    Product product = new Product();
+    SoftDrinks softDrink = new SoftDrinks();
+    SaltySnacks saltySnack = new SaltySnacks();
+    Chocolates chocolate = new Chocolates();
 
-    void buy(SoftDrinks softdrink) {}
-    void buy(SaltySnacks saltySnack) {}
-    void buy(Chocolates chocolate) {}
-    void buy(Product product) {}
 
     OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty) {
-        softDrinkQty1 = softDrinkQty;
-        saltySnacksQty1 = saltySnacksQty;
-        chocolatesQty1 = chocolatesQty;
+        this.chocolate.description();
     }
 
 }
