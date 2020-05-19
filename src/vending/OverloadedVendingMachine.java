@@ -15,7 +15,9 @@ public class OverloadedVendingMachine {
 
 
     OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty) {
-        this.chocolate.description();
+        this.saltySnack.setStockLevel(saltySnacksQty);
+        this.chocolate.setStockLevel(chocolatesQty);
+        this.softDrink.setStockLevel(softDrinkQty);
     }
 
 }
