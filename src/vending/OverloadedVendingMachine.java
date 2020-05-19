@@ -22,21 +22,21 @@ public class OverloadedVendingMachine {
     public void buy(SoftDrinks softDrink) {
         if (softDrink.getStockLevel() > 0) {
             softDrink.setStockLevel(softDrink.getStockLevel() - 1);
-            System.out.println(softDrink.getStockLevel() + " " + "Bought salty snack");
+            System.out.println(softDrink.getStockLevel() + " " + "Bought Soft drink");
         }
     }
 
     public void buy(SaltySnacks saltySnack) {
         if (saltySnack.getStockLevel() > 0) {
             saltySnack.setStockLevel(saltySnack.getStockLevel() - 1);
-            System.out.println(saltySnack.getStockLevel() + " " + "Bought salty snack");
+            System.out.println(saltySnack.getStockLevel() + " " + "Bought Salty snack");
         }
     }
 
     public void buy(Chocolates chocolate) {
         if (chocolate.getStockLevel() > 0) {
             chocolate.setStockLevel(chocolate.getStockLevel() - 1);
-            System.out.println(chocolate.getStockLevel() + " " + "Bought salty snack");
+            System.out.println(chocolate.getStockLevel() + " " + "Bought Chocolate");
         }
     }
 
@@ -75,4 +75,6 @@ public class OverloadedVendingMachine {
         int total = softDrink.getStockLevel() + saltySnack.getStockLevel() + chocolate.getStockLevel();
         return total;
     }
+
+
 }
