@@ -12,11 +12,7 @@ public class OverloadedVendingMachine {
     private int softDrinkLevel;
     private int saltySnacksLevel;
     private int chocolatesLevel;
-
-    Product product = new Product();
-    SoftDrinks softDrink = new SoftDrinks();
-    SaltySnacks saltySnack = new SaltySnacks();
-    Chocolates chocolate = new Chocolates();
+    private int stock;
 
     public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty) {
          softDrinkLevel = softDrinkQty ;
@@ -83,19 +79,19 @@ public class OverloadedVendingMachine {
     public void addStock(Product product) {}
 
     public int getStock(SoftDrinks softdrink) {
-        int stock = softDrinkLevel;
+         stock = softDrinkLevel;
         softdrink.description();
         return stock;
     }
 
     public int getStock(SaltySnacks saltySnack) {
-        int stock = saltySnacksLevel;
+        stock = saltySnacksLevel;
         saltySnack.description();
         return stock;
     }
 
     public int getStock(Chocolates chocolate) {
-        int stock = chocolatesLevel;
+         stock = chocolatesLevel;
         chocolate.description();
         return stock;
     }
