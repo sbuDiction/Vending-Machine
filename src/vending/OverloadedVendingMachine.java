@@ -109,7 +109,14 @@ public class OverloadedVendingMachine {
 
     public void promptEnterKey() {
         System.out.println("Press \"ENTER\" to continue...");
-        var scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
+    }
+
+    public void promptInput() {
+        String test = "";
+        Scanner myScanner = new Scanner(System.in);
+        test = myScanner.next();
+        System.out.print(test);
     }
 }
