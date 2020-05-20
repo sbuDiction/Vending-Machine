@@ -1,3 +1,2 @@
 # Vending Machine
 -
-*
