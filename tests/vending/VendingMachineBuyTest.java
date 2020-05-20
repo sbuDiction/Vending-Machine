@@ -48,4 +48,10 @@ public class VendingMachineBuyTest {
         overloadedVendingMachine.buy(product);
         assertEquals(32,overloadedVendingMachine.getStock(),"Should be able to buy 1 of everything in stock");
     }
+    @Test
+    public void shouldBuyTheAmountEntered() {
+        OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
+        overloadedVendingMachine.buy(5,2,5);
+        assertEquals(23,overloadedVendingMachine.getStock(),"Should be able to buy 1 of everything in stock");
+    }
 }

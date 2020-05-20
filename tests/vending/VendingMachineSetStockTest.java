@@ -8,6 +8,7 @@ import vending.product.SoftDrinks;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VendingMachineSetStockTest {
+
     @Test
     public void shouldSetStockForChocolate() {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
@@ -15,6 +16,7 @@ public class VendingMachineSetStockTest {
         overloadedVendingMachine.getStock(chocolates);
         assertEquals(10,overloadedVendingMachine.getStockLevelForChocolate(),"Should be abe to set the stock or update the stock for Chocolate");
     }
+
     @Test
     public void shouldSetStockForSaltySnacks() {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
@@ -22,6 +24,7 @@ public class VendingMachineSetStockTest {
         overloadedVendingMachine.getStock(saltySnack);
         assertEquals(5,overloadedVendingMachine.getStockLevelForSaltySnacks(),"Should be abe to set the stock or update the stock for Salty snacks");
     }
+
     @Test
     public void shouldSetStockForSoftDrinks() {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);

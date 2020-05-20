@@ -40,4 +40,11 @@ public class AddToStockTest {
         overloadedVendingMachine.addStock(product);
         assertEquals(38,overloadedVendingMachine.getStock(),"Should be able to return the number of items in stock for Salty snacks");
     }
+
+    @Test
+    public void shouldAddToStockOfTheAmountEntered() {
+        OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
+        overloadedVendingMachine.addStock(5,5,5);
+        assertEquals(50,overloadedVendingMachine.getStock(),"Should be able to return the number of items in stock for Salty snacks");
+    }
 }

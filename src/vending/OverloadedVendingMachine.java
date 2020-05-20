@@ -4,6 +4,8 @@ import vending.product.Chocolates;
 import vending.product.Product;
 import vending.product.SaltySnacks;
 import vending.product.SoftDrinks;
+
+import java.util.Scanner;
 // class instance.
 
 public class OverloadedVendingMachine {
@@ -12,7 +14,6 @@ public class OverloadedVendingMachine {
     private int softDrinkLevel;
     private int saltySnacksLevel;
     private int chocolatesLevel;
-    private int stock;
 
     public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty) {
          softDrinkLevel = softDrinkQty ;
@@ -41,7 +42,6 @@ public class OverloadedVendingMachine {
             chocolate.description();
         }
     }
-
 
     public int getStockLevelForSoftDrinks() {
         return softDrinkLevel;
@@ -95,5 +95,21 @@ public class OverloadedVendingMachine {
         return softDrinkLevel + saltySnacksLevel + chocolatesLevel;
     }
 
+    public void buy(int softDrinksItems , int chocolatesItems , int saltySnacksItems) {
+        softDrinkLevel = softDrinkLevel - softDrinksItems;
+        chocolatesLevel = chocolatesLevel - chocolatesItems;
+        saltySnacksLevel = saltySnacksLevel - saltySnacksItems;
+    }
 
+    public void addStock(int softDrinkQty, int chocolateQty, int saltySnacksQty) {
+        softDrinkLevel = softDrinkLevel + softDrinkQty;
+        chocolatesLevel = chocolatesLevel + chocolateQty;
+        saltySnacksLevel = saltySnacksLevel + saltySnacksQty;
+    }
+
+    public void promptEnterKey() {
+        System.out.println("Press \"ENTER\" to continue...");
+        var scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
 }
