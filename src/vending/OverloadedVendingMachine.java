@@ -58,7 +58,12 @@ public class OverloadedVendingMachine {
         return chocolatesLevel;
     }
 
-    public void buy(Product product) {}
+    public void buy(Product product) {
+        softDrinkLevel = softDrinkLevel -1;
+        saltySnacksLevel = saltySnacksLevel -1;
+        chocolatesLevel = chocolatesLevel -1;
+        product.description();
+    }
 
     public void addStock(SoftDrinks softdrink) {
         softDrinkLevel = softDrinkLevel + 1;

@@ -34,11 +34,10 @@ public class VendingMachineBuyTest {
         assertEquals(15,overloadedVendingMachine.getStockLevelForSoftDrinks(),"Should be able to buy 5 soft drinks from a stock of 20");
     }
 
-//    @Test
-//    public void shouldBuyAllSnacks() {
-//        OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
-//        overloadedVendingMachine.buy(overloadedVendingMachine.saltySnack);
-//        overloadedVendingMachine.buy(overloadedVendingMachine.saltySnack);
-//        assertEquals(3,overloadedVendingMachine.saltySnack.getStockLevel(),"Should be able to buy 2 salty snacks from a stock of 5");
-//    }
+    @Test
+    public void shouldBuyAllSnacks() {
+        OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
+        overloadedVendingMachine.buy(overloadedVendingMachine.product);
+        assertEquals(32,overloadedVendingMachine.getStock(),"Should be able to buy 1 of everything in stock");
+    }
 }
