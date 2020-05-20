@@ -58,42 +58,32 @@ public class OverloadedVendingMachine {
         softDrinkLevel = softDrinkLevel -1;
         saltySnacksLevel = saltySnacksLevel -1;
         chocolatesLevel = chocolatesLevel -1;
-        product.description();
     }
 
     public void addStock(SoftDrinks softdrink) {
         softDrinkLevel = softDrinkLevel + 1;
-        softdrink.description();
     }
 
     public void addStock(SaltySnacks saltySnack) {
         saltySnacksLevel = saltySnacksLevel +1;
-        saltySnack.description();
     }
 
     public void addStock(Chocolates chocolate) {
         chocolatesLevel = chocolatesLevel + 1;
-        chocolate.description();
     }
 
     public void addStock(Product product) {}
 
     public int getStock(SoftDrinks softdrink) {
-         stock = softDrinkLevel;
-        softdrink.description();
-        return stock;
+        return softDrinkLevel;
     }
 
     public int getStock(SaltySnacks saltySnack) {
-        stock = saltySnacksLevel;
-        saltySnack.description();
-        return stock;
+        return saltySnacksLevel;
     }
 
     public int getStock(Chocolates chocolate) {
-         stock = chocolatesLevel;
-        chocolate.description();
-        return stock;
+        return chocolatesLevel;
     }
 
     public int getStock() {
