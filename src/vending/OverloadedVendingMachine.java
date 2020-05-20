@@ -42,6 +42,7 @@ public class OverloadedVendingMachine {
         }
     }
 
+
     public int getStockLevelForSoftDrinks() {
         return softDrinkLevel;
     }
@@ -72,7 +73,11 @@ public class OverloadedVendingMachine {
         chocolatesLevel = chocolatesLevel + 1;
     }
 
-    public void addStock(Product product) {}
+    public void addStock(Product product) {
+        saltySnacksLevel = saltySnacksLevel +1;
+        chocolatesLevel = chocolatesLevel +1;
+        softDrinkLevel = softDrinkLevel +1;
+    }
 
     public int getStock(SoftDrinks softdrink) {
         return softDrinkLevel;

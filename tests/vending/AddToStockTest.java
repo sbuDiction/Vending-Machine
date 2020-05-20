@@ -2,6 +2,7 @@ package vending;
 
 import org.junit.jupiter.api.Test;
 import vending.product.Chocolates;
+import vending.product.Product;
 import vending.product.SaltySnacks;
 import vending.product.SoftDrinks;
 
@@ -30,5 +31,13 @@ public class AddToStockTest {
         Chocolates chocolates = new Chocolates();
         overloadedVendingMachine.addStock(chocolates);
         assertEquals(11,overloadedVendingMachine.getStockLevelForChocolate(),"Should be able to return the number of items in stock for Salty snacks");
+    }
+
+    @Test
+    public void shouldAddStockToOneOfEverything() {
+        OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
+        Product product = new Product();
+        overloadedVendingMachine.addStock(product);
+        assertEquals(38,overloadedVendingMachine.getStock(),"Should be able to return the number of items in stock for Salty snacks");
     }
 }
