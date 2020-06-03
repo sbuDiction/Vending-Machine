@@ -1,10 +1,10 @@
 package vending;
 
 import org.junit.jupiter.api.Test;
-import vending.product.Chocolates;
+import vending.product.Chocolate;
 import vending.product.Product;
-import vending.product.SaltySnacks;
-import vending.product.SoftDrinks;
+import vending.product.SaltySnack;
+import vending.product.SoftDrink;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,7 +12,7 @@ public class AddToStockTest {
     @Test
     public void shouldAddStockToSaltySnacks() {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
-        SaltySnacks saltySnack = new SaltySnacks();
+        SaltySnack saltySnack = new SaltySnack();
         overloadedVendingMachine.addStock(saltySnack);
         assertEquals(6,overloadedVendingMachine.getStockLevelForSaltySnacks(),"Should be able to return the number of items in stock for Salty snacks");
     }
@@ -20,7 +20,7 @@ public class AddToStockTest {
     @Test
     public void shouldAddStockToSoftDrinks() {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
-        SoftDrinks softDrinks = new SoftDrinks();
+        SoftDrink softDrinks = new SoftDrink();
         overloadedVendingMachine.addStock(softDrinks);
         assertEquals(21,overloadedVendingMachine.getStockLevelForSoftDrinks(),"Should be able to return the number of items in stock for Salty snacks");
     }
@@ -28,7 +28,7 @@ public class AddToStockTest {
     @Test
     public void shouldAddStockToChocolate() {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
-        Chocolates chocolates = new Chocolates();
+        Chocolate chocolates = new Chocolate();
         overloadedVendingMachine.addStock(chocolates);
         assertEquals(11,overloadedVendingMachine.getStockLevelForChocolate(),"Should be able to return the number of items in stock for Salty snacks");
     }

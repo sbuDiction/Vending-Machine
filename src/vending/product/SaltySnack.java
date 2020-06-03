@@ -1,6 +1,7 @@
 package vending.product;
 
-public class SaltySnacks extends Product {
+public class SaltySnack extends Product {
+
     public String description() {
         return "This is a Salty snack";
     }

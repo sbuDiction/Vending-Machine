@@ -1,9 +1,9 @@
 package vending;
 // imports.
-import vending.product.Chocolates;
+import vending.product.Chocolate;
 import vending.product.Product;
-import vending.product.SaltySnacks;
-import vending.product.SoftDrinks;
+import vending.product.SaltySnack;
+import vending.product.SoftDrink;
 
 import java.util.Scanner;
 // class instance.
@@ -21,14 +21,14 @@ public class OverloadedVendingMachine {
          chocolatesLevel = chocolatesQty;
     }
 
-    public void buy(SoftDrinks softDrink) {
+    public void buy(SoftDrink softDrink) {
         if (softDrinkLevel > 0) {
             softDrinkLevel = softDrinkLevel - 1;
             softDrink.description();
         }
     }
 
-    public void buy(SaltySnacks saltySnack) {
+    public void buy(SaltySnack saltySnack) {
         if (saltySnacksLevel > 0) {
             saltySnacksLevel = saltySnacksLevel -1;
             System.out.println();
@@ -36,7 +36,7 @@ public class OverloadedVendingMachine {
         }
     }
 
-    public void buy(Chocolates chocolate) {
+    public void buy(Chocolate chocolate) {
         if (chocolatesLevel > 0) {
             chocolatesLevel = chocolatesLevel - 1;
             chocolate.description();
@@ -61,15 +61,15 @@ public class OverloadedVendingMachine {
         chocolatesLevel = chocolatesLevel -1;
     }
 
-    public void addStock(SoftDrinks softdrink) {
+    public void addStock(SoftDrink softdrink) {
         softDrinkLevel = softDrinkLevel + 1;
     }
 
-    public void addStock(SaltySnacks saltySnack) {
+    public void addStock(SaltySnack saltySnack) {
         saltySnacksLevel = saltySnacksLevel +1;
     }
 
-    public void addStock(Chocolates chocolate) {
+    public void addStock(Chocolate chocolate) {
         chocolatesLevel = chocolatesLevel + 1;
     }
 
@@ -79,15 +79,15 @@ public class OverloadedVendingMachine {
         softDrinkLevel = softDrinkLevel +1;
     }
 
-    public int getStock(SoftDrinks softdrink) {
+    public int getStock(SoftDrink softdrink) {
         return softDrinkLevel;
     }
 
-    public int getStock(SaltySnacks saltySnack) {
+    public int getStock(SaltySnack saltySnack) {
         return saltySnacksLevel;
     }
 
-    public int getStock(Chocolates chocolate) {
+    public int getStock(Chocolate chocolate) {
         return chocolatesLevel;
     }
 

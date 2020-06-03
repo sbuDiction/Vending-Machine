@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
         OverloadedVendingMachine overloadedVendingMachine = new OverloadedVendingMachine(20,5,10);
         Product product = new Product();
-        SoftDrinks softDrink = new SoftDrinks();
-        Chocolates chocolate = new Chocolates();
-        SaltySnacks saltySnack = new SaltySnacks();
+        SoftDrink softDrink = new SoftDrink();
+        Chocolate chocolate = new Chocolate();
+        SaltySnack saltySnack = new SaltySnack();
 
         System.out.println("20 Soft drinks added to stock ✔\n5 Salty snacks added to stock ✔\n10 Chocolates added to stock ✔\n_______ ______________________");
         System.out.println("       #VENDING MACHINE\n_______ ______________________");
