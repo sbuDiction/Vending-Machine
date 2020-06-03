@@ -27,12 +27,19 @@ public class ExtendableVendingMachine {
         if (product instanceof Chocolate) {
             Chocolates = Chocolates-1;
         }
-        else if (product instanceof Product) {
-             msg = "Please select a product you want.";
-        }
     }
 
-    public void addStock(Product product) {}
+    public void addStock(Product product) {
+        if (product instanceof SoftDrink) {
+            SoftDrinks = SoftDrinks+3;
+        }
+        if (product instanceof SaltySnack) {
+            SaltySnacks = SaltySnacks+3;
+        }
+        if (product instanceof Chocolate) {
+            Chocolates = Chocolates+3;
+        }
+    }
 
     public int getStockForSoftDrinks() {
         System.out.println(this.SoftDrinks);
