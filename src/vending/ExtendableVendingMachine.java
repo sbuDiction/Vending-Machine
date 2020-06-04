@@ -9,7 +9,7 @@ public class ExtendableVendingMachine {
     private int SoftDrinks;
     private int SaltySnacks;
     private int Chocolates;
-    private String msg;
+    private int stockType = 0;
 
     public ExtendableVendingMachine(int SoftDrinks, int SaltySnacks, int Chocolates) {
         this.SoftDrinks = SoftDrinks;
@@ -41,12 +41,35 @@ public class ExtendableVendingMachine {
         }
     }
 
-    public int getStockForSoftDrinks() {
-        System.out.println(this.SoftDrinks);
+    public int getSoftDrinks() {
+        System.out.println("stock level for SoftDrinks " + this.SoftDrinks);
         return this.SoftDrinks;
     }
 
-    public String getMsg() {
-        return msg;
+    public int getChocolates() {
+        System.out.println("stock level for Chocolates " + this.Chocolates);
+        return this.Chocolates;
+    }
+
+    public int getSaltySnacks() {
+        System.out.println("stock level for SaltySnacks " + this.SaltySnacks);
+        return this.SaltySnacks;
+    }
+
+    public int getStock(Product product) {
+        if (product instanceof SoftDrink){
+            stockType = stockType + SoftDrinks;
+            System.out.println(stockType);
+        }
+        if (product instanceof SaltySnack) {
+            stockType = stockType + SaltySnacks;
+        }
+        if (product instanceof Chocolate) {
+            stockType = stockType + Chocolates;
+            System.out.println(stockType);
+        }
+
+        return stockType;
+
     }
 }
