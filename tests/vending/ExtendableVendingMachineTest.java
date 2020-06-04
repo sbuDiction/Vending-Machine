@@ -80,4 +80,22 @@ public class ExtendableVendingMachineTest {
 
     }
 
+    @Test
+    public void buyHowManyTest() {
+        ExtendableVendingMachine extendableVendingMachine = new ExtendableVendingMachine(10,15,5);
+        extendableVendingMachine.buy(new Chocolate(),2);
+
+        assertEquals(extendableVendingMachine.getStock(new Chocolate()),3);
+
+    }
+
+    @Test
+    public void shouldSpecifyHowManyToAddToStock() {
+        ExtendableVendingMachine extendableVendingMachine = new ExtendableVendingMachine(10,15,5);
+        extendableVendingMachine.addStock(new Chocolate(),10);
+
+        assertEquals(extendableVendingMachine.getStock(new Chocolate()),15);
+
+    }
+
 }

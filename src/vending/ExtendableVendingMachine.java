@@ -42,18 +42,18 @@ public class ExtendableVendingMachine {
     }
 
     public int getSoftDrinks() {
-        System.out.println("stock level for SoftDrinks " + this.SoftDrinks);
-        return this.SoftDrinks;
+        System.out.println("stock level for SoftDrinks " + SoftDrinks);
+        return SoftDrinks;
     }
 
     public int getChocolates() {
-        System.out.println("stock level for Chocolates " + this.Chocolates);
-        return this.Chocolates;
+        System.out.println("stock level for Chocolates " + Chocolates);
+        return Chocolates;
     }
 
     public int getSaltySnacks() {
-        System.out.println("stock level for SaltySnacks " + this.SaltySnacks);
-        return this.SaltySnacks;
+        System.out.println("stock level for SaltySnacks " + SaltySnacks);
+        return SaltySnacks;
     }
 
     public int getStock(Product product) {
@@ -70,6 +70,29 @@ public class ExtendableVendingMachine {
         }
 
         return stockType;
+    }
 
+    public void buy(Product product, int qty) {
+        if (product instanceof Chocolate) {
+            Chocolates = Chocolates - qty;
+        }
+        if (product instanceof SaltySnack) {
+            SaltySnacks = SaltySnacks - qty;
+        }
+        if (product instanceof SoftDrink) {
+            SoftDrinks = SoftDrinks - qty;
+        }
+    }
+
+    public void addStock(Product product, int qty) {
+        if (product instanceof Chocolate) {
+            Chocolates = Chocolates + qty;
+        }
+        if (product instanceof SaltySnack) {
+            SaltySnacks = SaltySnacks + qty;
+        }
+        if (product instanceof SoftDrink) {
+            SoftDrinks = SoftDrinks + qty;
+        }
     }
 }

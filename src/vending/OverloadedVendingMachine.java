@@ -112,11 +112,4 @@ public class OverloadedVendingMachine {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
-
-    public void promptInput() {
-        String test = "";
-        Scanner myScanner = new Scanner(System.in);
-        test = myScanner.next();
-        System.out.print(test);
-    }
 }
